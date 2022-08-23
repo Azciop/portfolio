@@ -13,25 +13,98 @@
     justify-content: space-around;
 }
 
-.align_items {
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align_center {
     display: flex;
     align-items: center;
 }
 
-a {
-    text-decoration: none;
+.flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-li {
+ul li a {
+    text-decoration: none;
+    color: darkgoldenrod;
     list-style: none;
-    padding-right: 25px;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    border-bottom: 2px solid darkgoldenrod;
+    padding-bottom: 5px;
 }
 
 header {
-    background-color: lightblue;
-    height: 100px;
+    background-color: black;
+    height: 75px;
+}
+
+.logo_header {
+    height: 50px;
+    margin-left: 25px;
 }
 
 #home {
-    background-color: aqua;
+    background: url(../images/space_background.webp);
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+}
+
+#home p {
+    font-size: 1.7rem;
+    padding: 20px;
+
+}
+
+.presention_box {
+    padding-bottom: 40px;
+}
+
+.profil_picture {
+    height: 250px;
+    padding: 20px 20px 0 0; 
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 20px 20px 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 20px 0 20px;
+}
+
+#skills {
+    background: url(../images/sky-background.jpg);
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.skills_box {
+    justify-content: center;
+}
+
+figure {
+    background-color: white;
+    margin: 40px;
+}
+
+figure img {
+    height: 75px;
 }
