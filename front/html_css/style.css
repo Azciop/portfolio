@@ -3,6 +3,21 @@
     padding: 0;
 }
 
+main {
+    background-color: beige;
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    width: 70%;
+    border: 0;
+    border-top: 5px solid rgb(194, 175, 151);
+    margin: 0 auto;
+    padding: 15px;
+}
+
 .flex_between {
     display: flex;
     justify-content: space-between;
@@ -52,9 +67,7 @@ header {
 }
 
 #home {
-
     text-align: center;
-
 }
 
 #home p {
@@ -69,7 +82,7 @@ header {
 
 .profil_picture {
     height: 250px;
-    padding: 20px 20px 0 0; 
+    box-shadow:  0 3px 20px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -83,17 +96,66 @@ h2 {
     padding: 20px 20px 0 20px;
 }
 
-
-
 .skills_box {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
+    text-align: center;
+    width: 80%;
+    z-index: 1;
+    background-color: rgb(194, 190, 139);
+    border-radius: 25px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-figure {
-    background-color: white;
-    margin: 40px;
+.skills_box .icon {
+    font-size: 50px;
 }
 
-figure img {
-    height: 75px;
+.skill_unitary {
+    min-width: 20%;
+    border-bottom: 2px solid black;
+    border-radius: 20px;
+    box-shadow:  0 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 15px;
+    padding: 10px;
+    background-color: rgb(196, 193, 155);
+}
+
+.skill_unitary:hover {
+    transform: scale(1.1);
+}
+
+.skills_box h6 {
+    color: rgb(245, 245, 238);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-top: 4px solid black;
+    border-radius: 20px;
+}
+
+#degree {
+    text-align: center;
+}
+
+.degrees {
+    margin: 20px;
+    
+}
+
+.degrees h3 {
+font-size: 1.7rem;
+}
+
+.degrees h5 {
+    font-size: 1.2rem;
+}
+
+.degrees h6 {
+    font-size: 1rem;
 }
