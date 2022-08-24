@@ -52,13 +52,9 @@ header {
 }
 
 #home {
-    background: url(../images/space_background.webp);
-    background-position: 50%;
-    background-size: cover;
-    width: 100%;
-    height: auto;
+
     text-align: center;
-    color: white;
+
 }
 
 #home p {
@@ -87,14 +83,7 @@ h2 {
     padding: 20px 20px 0 20px;
 }
 
-#skills {
-    background: url(../images/sky-background.jpg);
-    background-position: 50%;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
+
 
 .skills_box {
     justify-content: center;
