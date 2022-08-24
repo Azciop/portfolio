@@ -5,25 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Bernamont Steven</title>
 </head>
 <body> 
-    <header class="flex_between align_items">
-        <img src="../images/logo-portefolio.png" class="logo_header" style="height: 50px;">
+    <!-- Header with scrolldown for the nav -->
+    <header class="flex_between align_center">
+        <img src="../images/logo-portefolio-nocircle.png" class="logo_header">
         <nav>
-            <ul class="flex_between">
-                <li><a>Home</a></li>
-                <li><a>A propos</a></li>
-                <li><a>Réalisations</a></li>
-                <li><a>Me contacter</a></li>
-            </ul>
-        </nav>
+                <ul class="flex_between">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Réalisations</a></li>
+                    <li><a href="#">Me contacter</a></li>
+                </ul>
+            </div>
     </header>
     <main>
     <section id="home">
-        <h1>Qui suis-je?</h1>
-        <h2>Steven Bernamont</h2>
-        <h3>Développeur FullStack</h3>
+        <h1>Steven Bernamont</h1>
+        <h2>Développeur FullStack</h2>
+        <div class="presention_box">
         <p>Salut ! Je m'appelle Steven Bernamont, j'ai 26 ans et je suis fraichement diplomé Développeur Web via
             la formation
             d'OpenClassRoom <a href="https://openclassrooms.com/fr/" target="_blank" rel="noreferrer noopener"><img
@@ -33,65 +35,62 @@
             J'ai très vite accrocher à ce domaine et plus particulièrement au front, en particuler les projets
             utilisant le Framework Vue.js.
           </p>
-          <img src="../images/profil-picture.jpg" class="profil_picture" style="height: 250px">
+          <img src="../images/profil-picture.jpg" class="profil_picture">
+        </div>
     </section>
     <section id="about">
     <article id="skills">
         <h2>Mes Compétences Techniques</h2>
+        <div class="skills_box flex_row flex_wrap">
         <figure>
-            <img>
+            <img src="../images/html_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/css_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/javascript_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/vuejs_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/node_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/mogoDB_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/github_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
         <figure>
-            <img>
+            <img src="../images/sass_logo.png">
             <figcaption>
                 <h4></h4>
             </figcaption>
         </figure>
-        <figure>
-            <img>
-            <figcaption>
-                <h4></h4>
-            </figcaption>
-        </figure>
+        </div>
     </article>
     <article id="degree">
         <h2>Parcours Scolaire & Formations</h2>
@@ -111,7 +110,7 @@
         <h2>Projets De Formation</h2>
         </article>
         <article id="pro_creation">
-        <h2>Prokets Personnels & Professionnels</h2>
+        <h2>Projets Personnels & Professionnels</h2>
         </article>
     </section>
     <section id="contact">
