@@ -49,6 +49,40 @@ hr {
     flex-wrap: wrap;
 }
 
+/* scroll to top button  */
+
+#scrollUpBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: rgb(194, 190, 139);
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    transition: all .5s ease-in-out;
+    opacity: 0.80;
+    
+  }
+
+  #scrollUpBtn .icon {
+    color: white;
+  }
+  
+  #scrollUpBtn:hover {
+    transform: scale(1.3);
+    transition: all .5s ease-in-out;
+    opacity: 1;
+  }
+/*  */
+
+/* dropdown nav button */
+
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -93,6 +127,8 @@ hr {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/*  */
 
 .nav_desktop {
     display: none;
@@ -144,20 +180,20 @@ main {
 
 .profil_picture {
     background: url("../images/profil-picture1.jpg") no-repeat;
-    background-size: 450px 500px;
+    background-size: 400px 400px;
     display: inline-block;
-    width: 450px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     content: "";
     object-fit: cover;
 }
 
 .profil_picture:hover {
     background: url("../images/profil-picture2.jpg") no-repeat;
-    background-size: 450px 500px;
+    background-size: 400px 400px;
     display: inline-block;
-    width: 450px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     content: "";
     object-fit: cover;
 }
@@ -170,7 +206,7 @@ h1 {
 h2 {
     font-size: 2rem;
     text-align: center;
-    padding: 20px 20px 0 20px;
+    padding: 20px
 }
 
 .cv_link {
@@ -250,11 +286,20 @@ h2 {
 
 #degree {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.degrees_container {
+    width: 60%;
+    margin: 50px 0;
+    background-color: rgb(194, 190, 139);
+    border-radius: 25px;
 }
 
 .degrees {
     margin: 20px;
-
 }
 
 .degrees h3 {
@@ -376,6 +421,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 .contact_infos div {
@@ -487,7 +533,7 @@ footer p {
         transition: all .4s ease-in-out;
     }
     .projects_unity:hover {
-        transform: scale(1.3);
+        transform: scale(1.1);
         border: 1px solid black;
         transition: all .4s ease-in-out;
     }
@@ -501,22 +547,39 @@ footer p {
         display: flex;
         align-items: center;
     }
+    .presention_box p {
+        margin-left: 180px;
+    }
     .cv_link {
-
+        margin-right: 200px;
     }
     .profil_picture {
-        margin-right: 15px;
+        margin-top: 80px; 
+        margin-right: 200px;
+        
     }
     .projects_unity {
         width: 25%;
         transition: all .4s ease-in-out;
     }
     .projects_unity:hover {
-        transform: scale(1.3);
+        transform: scale(1.1);
         border: 1px solid black;
         transition: all .4s ease-in-out;
     }
     .projects_background {
         height: 150px;
     }
+}
+
+@media all and (min-width: 1500px) {
+        .presention_box p {
+            padding-left: 100px !important;
+            padding-right: 100px !important;
+            margin-left: 0px;
+        }
+        .profil_picture {
+            margin-top: 80px; 
+            margin-right: 200px;
+        }
 }
