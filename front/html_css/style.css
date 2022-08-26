@@ -81,7 +81,6 @@ hr {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -89,20 +88,14 @@ hr {
     display: block;
 }
 
-
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
 
 ul li a {
     text-decoration: none;
@@ -200,7 +193,7 @@ h2 {
 }
 
 .cv_link:hover {
-    transform: scale(1.2);
+    color: blue;
 }
 
 #skills {
@@ -243,7 +236,7 @@ h2 {
 
 .skills_box h6 {
     color: rgb(245, 245, 238);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     padding-bottom: 5px;
     padding-top: 10px;
