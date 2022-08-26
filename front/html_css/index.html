@@ -38,6 +38,8 @@
                 <li><a href="#creation">Réalisations</a></li>
                 <li><a href="#contact">Me contacter</a></li>
             </ul> 
+            <button onclick="scrollUp()" id="scrollUpBtn"><i class="fa-solid fa-arrow-up icon" style="color:  rgb(255, 255, 255);;"></i></button>
+
             </nav>
     </header>
     <main>
@@ -112,7 +114,8 @@
             <!-- degrees section  -->
             <article id="degree">
                 <h2>Parcours Scolaire & Formations</h2>
-                <div class="degrees first_degree">
+                <div class="degrees_container">
+                <div class="degrees first_degree ">
                     <h3>Développeur Web</h3>
                     <h5>OpenClassRooms, Distanciel</h5>
                     <h6>2021-2022</h6>
@@ -127,6 +130,7 @@
                     <h5>Lycée César Baggio, Lille</h5>
                     <h6>2014</h6>
                 </div>
+            </div>
             </article>
         </section>
         <hr />
@@ -267,16 +271,17 @@
             <!-- personnal infos section  -->
             <h2>Pour me contacter, c'est ici !</h2>
             <p>Cliquez sur une info pour la copier</p>
+            <p id="copied_message" style="color: red; display: none;">Le lien a bien été copié</p>
             <!-- personnal info with copy to clipboard onClick function -->
             <div class="contact_infos flex_wrap">
                 <div>
-                    <i class="fa-brands fa-linkedin icon" style="color: rgba(45, 85, 255, 1);"><a href="https://www.linkedin.com/in/steven-bernamont-809a45248/" onclick="copyURI(event)">linkedin</i></a> 
+                    <i class="fa-brands fa-linkedin icon" style="color: rgba(45, 85, 255, 1);"><a href="https://www.linkedin.com/in/steven-bernamont-809a45248/" onclick="showMessage(event); copyURI(event)">linkedin</i></a> 
                 </div>
                 <div>
-                    <i class="fa-solid fa-phone icon" style="color: rgba(45, 85, 255, 1);"><a href="0766135970" onclick="copyURI(event)">07.66.13.59.70</a></i>               
+                    <i class="fa-solid fa-phone icon" style="color: rgba(45, 85, 255, 1);"><a href="0766135970" onclick="showMessage(event); copyURI(event)">07.66.13.59.70</a></i>               
                 </div>
                 <div>
-                    <i class="fa-solid fa-envelope icon" style="color: rgba(45, 85, 255, 1);"><a href="stevenbernamontcontact@gmail.com" onclick="copyURI(event)">stevenbernamontcontact@gmail.com</a></i>
+                    <i class="fa-solid fa-envelope icon" style="color: rgba(45, 85, 255, 1);"><a href="stevenbernamontcontact@gmail.com" onclick="showMessage(event); copyURI(event)">stevenbernamontcontact@gmail.com</a></i>
                 </div>
                
             </div>
