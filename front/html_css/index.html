@@ -8,38 +8,40 @@
     <link rel="icon" href="../images/logo-portefolio.png" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e5aa968fef.js" crossorigin="anonymous"></script>
     
-
     <title>Bernamont Steven</title>
 </head>
 
 <body>
     <!-- Header with scrolldown for the nav -->
     <header class="flex_between align_center">
-        <img src="../images/logo-portefolio-nocircle.png" class="logo_header">
+       <a href="#home"> <img src="../images/logo-portefolio-nocircle.png"  class="logo_header"></a>
         <nav>
+            <!-- nav phone -->
             <div class="dropdown">
                 <button class="dropbtn"><i class="fa-solid fa-square-caret-down icon"></i></button>
                 <div class="dropdown-content nav_phone">
-                   <a href="#home">Home</a>
+                    <a href="#home">Home</a>
                     <a href="#about">A propos</a>
                     <a href="#creation">Réalisations</a>
                     <a href="#contact">Me contacter</a>
                 </div>
               </div>
-            <!-- <ul class="flex_between nav_desktop">
+
+              <!-- nav desktop tablet -->
+            <ul class="flex_between nav_desktop">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">A propos</a></li>
                 <li><a href="#creation">Réalisations</a></li>
                 <li><a href="#contact">Me contacter</a></li>
-            </ul> -->
+            </ul> 
             </nav>
     </header>
     <main>
+        <!-- presentation section -->
         <section id="home">
             <h1>Steven Bernamont</h1>
             <h2>Développeur Web</h2>
@@ -56,14 +58,17 @@
                     utilisant le Framework Vue.js.
                 </p>
                 <div>
-                    <div class="profil_picture">
-                    </div>
+                    <!-- profil picture swapping -->
+                    <div class="profil_picture"></div>
+                    <!-- resume downloading feature  -->
                     <a class="cv_link" href="../images/CV_Bernamont_Steven_082022.pdf" download="CV_BernamontSteven">Cliquez sur le C.V pour l'enregistrer<img class="cv_image" src="../images/cv_background.png"></a>
                 </div>
                 </div>
         </section>
         <hr />
+        <!-- about me section  -->
         <section id="about">
+            <!-- stacks skills  -->
             <article id="skills">
                 <h2>Mes Compétences Techniques</h2>
                 <div class="skills_box flex_row flex_wrap">
@@ -104,6 +109,7 @@
                 <img class="emoji4" src="../images/emoji4.png">
             </article>
             <hr />
+            <!-- degrees section  -->
             <article id="degree">
                 <h2>Parcours Scolaire & Formations</h2>
                 <div class="degrees first_degree">
@@ -124,7 +130,9 @@
             </article>
         </section>
         <hr />
+        <!-- projects section  -->
         <section id="creation">
+            <!-- studies projects  -->
             <article id="study_creation">
                 <h2>Projets De Formation</h2>
                 <div class="projects_box  flex_row flex_wrap">
@@ -221,6 +229,7 @@
                 </div>
             </article>
             <hr />
+            <!-- personnal and pro projects  -->
             <article id="pro_creation">
                 <h2>Projets Personnels & Professionnels</h2>
                 <div class="projects_box  flex_row flex_wrap">
@@ -255,8 +264,10 @@
         </section>
         <hr />
         <section id="contact">
+            <!-- personnal infos section  -->
             <h2>Pour me contacter, c'est ici !</h2>
             <p>Cliquez sur une info pour la copier</p>
+            <!-- personnal info with copy to clipboard onClick function -->
             <div class="contact_infos flex_wrap">
                 <div>
                     <i class="fa-brands fa-linkedin icon" style="color: rgba(45, 85, 255, 1);"><a href="https://www.linkedin.com/in/steven-bernamont-809a45248/" onclick="copyURI(event)">linkedin</i></a> 
@@ -271,9 +282,11 @@
             </div>
         </section>
     </main>
+    <!-- footer with copyright -->
     <footer>
         <p>Bernamont Steven 2022 © </p>
     </footer>
+    <!-- JS script tag -->
     <script type="text/javascript" src="../javascript/script.js"></script>
 </body>
 
