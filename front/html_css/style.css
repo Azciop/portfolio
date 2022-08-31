@@ -4,6 +4,10 @@
     font-family: 'Aboreto', cursive;
 }
 
+body {
+    margin: 0;
+}
+
 main {
     background-color: beige;
 }
@@ -52,33 +56,34 @@ hr {
 /* scroll to top button  */
 
 #scrollUpBtn {
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
-    z-index: 99; 
-    border: none; 
-    outline: none; 
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 98;
+    border: none;
+    outline: none;
     background-color: rgb(194, 190, 139);
-    color: white; 
-    cursor: pointer; 
-    padding: 15px; 
-    border-radius: 10px; 
-    font-size: 18px; 
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
     transition: all .5s ease-in-out;
     opacity: 0.80;
-    
-  }
 
-  #scrollUpBtn .icon {
+}
+
+#scrollUpBtn .icon {
     color: white;
-  }
-  
-  #scrollUpBtn:hover {
+}
+
+#scrollUpBtn:hover {
     transform: scale(1.3);
     transition: all .5s ease-in-out;
     opacity: 1;
-  }
+}
+
 /*  */
 
 /* dropdown nav button */
@@ -133,6 +138,7 @@ hr {
 .nav_desktop {
     display: none;
 }
+
 ul li a {
     text-decoration: none;
     color: darkgoldenrod;
@@ -152,7 +158,25 @@ header {
     height: 75px;
     position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 98;
+}
+
+.emoji_header {
+    position: relative;
+}
+
+.emoji1 {
+    width: 75px;
+    position: absolute;
+    left: 0;
+    top: -25px;
+}
+
+.emoji2 {
+    position: absolute;
+    width: 65px;
+    top: -68px;
+    left: 20px;
 }
 
 .logo_header {
@@ -292,6 +316,7 @@ h2 {
 }
 
 .degrees_container {
+    position: relative;
     width: 60%;
     margin: 50px 0;
     background-color: rgb(194, 190, 139);
@@ -411,6 +436,17 @@ h2 {
     opacity: 0.50;
 }
 
+#contact {
+    position: relative;
+}
+
+.homehome_time {
+    position: absolute;
+    bottom: -10px;
+
+    font-size: 10px;
+}
+
 #contact p {
     text-align: center;
     font-weight: bold;
@@ -437,7 +473,7 @@ h2 {
 }
 
 .contact_infos div:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: all 0.5s ease-in-out;
 }
 
@@ -456,16 +492,60 @@ h2 {
 }
 
 footer {
-    background-color: black;
+    background-color: lightblue;
     height: 75px;
     width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 footer p {
-    color: darkgoldenrod;
+    color: black;
+    font-weight: bold;
+}
+
+.emoji3 {
+    position: absolute;
+    width: 75px;
+    left: 25px;
+    top: -75px;
+}
+
+/*  */
+/*  */
+/* Loading animation */
+/*  */
+/*  */
+
+.body_fade-in {
+    -webkit-animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+    animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.loader_animation {
+    width: 100%;
 }
 
 /*  */
@@ -480,8 +560,45 @@ footer p {
     .dropdown {
         display: none;
     }
+
     .nav_desktop {
         display: inline-flex;
+    }
+    
+    .loader_animation {
+        z-index: 99;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        -webkit-animation: slide 4s forwards;
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+        animation: slide 4s forwards;
+
+    }
+
+    @-webkit-keyframes slide {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: 100%;
+        }
     }
 }
 
@@ -492,17 +609,18 @@ footer p {
         width: 20%;
     }
 
- .projects_unity {
-    width: 45%;
-    margin: 3px;
-    height: 420px;
-    
- }
+    .projects_unity {
+        width: 45%;
+        margin: 3px;
+        height: 420px;
+
+    }
 
     .projects_background {
         height: 125px;
         transition: all .4s ease-in-out;
     }
+
     .projects_background:hover {
         transform: scale(1.3);
         border: 1px solid black;
@@ -517,7 +635,7 @@ footer p {
     .skill_unitary {
         width: 20%;
     }
-    
+
 }
 
 @media all and (min-width: 1001px) and (max-width: 1300px) {
@@ -525,20 +643,28 @@ footer p {
         display: flex;
         align-items: center;
     }
+
     .profil_picture {
         margin-right: 15px;
     }
+
     .projects_unity {
         width: 35%;
         transition: all .4s ease-in-out;
     }
+
     .projects_unity:hover {
         transform: scale(1.1);
         border: 1px solid black;
         transition: all .4s ease-in-out;
     }
+
     .projects_background {
         height: 150px;
+    }
+
+    .cv_image {
+        margin-left: 20px;
     }
 }
 
@@ -547,39 +673,90 @@ footer p {
         display: flex;
         align-items: center;
     }
+
     .presention_box p {
         margin-left: 180px;
     }
+
     .cv_link {
         margin-right: 200px;
     }
+
     .profil_picture {
-        margin-top: 80px; 
+        margin-top: 80px;
         margin-right: 200px;
-        
+
     }
+
     .projects_unity {
         width: 25%;
         transition: all .4s ease-in-out;
     }
+
     .projects_unity:hover {
         transform: scale(1.1);
         border: 1px solid black;
         transition: all .4s ease-in-out;
     }
+
     .projects_background {
         height: 150px;
     }
 }
 
 @media all and (min-width: 1500px) {
-        .presention_box p {
-            padding-left: 100px !important;
-            padding-right: 100px !important;
-            margin-left: 0px;
-        }
-        .profil_picture {
-            margin-top: 80px; 
-            margin-right: 200px;
-        }
+    .presention_box p {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+        margin-left: 0px;
+    }
+
+    .profil_picture {
+        margin-top: 80px;
+        margin-right: 200px;
+    }
 }
+
+/*  */
+/*  */
+/* Animations */
+/*  */
+/*  */
+
+@media all and (max-width : 700px) {
+    
+    .loader_animation{
+        z-index: 99;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        -webkit-animation: fade-out 0.1s ease-out 2s both;
+        animation: fade-out 0.1s ease-out 2s both;
+    }
+
+    @-webkit-keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+;
