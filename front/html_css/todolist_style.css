@@ -1,3 +1,40 @@
+.flex_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align_center {
+    display: flex;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Aboreto', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+header {
+    background-color: black;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    
+    
+}
+
+.logo_header {
+    height: 50px;
+    margin-left: 25px;
+}
+
+
 nav a {
     text-decoration: none;
     color: darkgoldenrod;
@@ -10,4 +47,164 @@ nav a {
 nav a:hover {
     border-bottom: 2px solid darkgoldenrod;
     padding-bottom: 5px;
+}
+
+main {
+    background-color: beige;
+    padding-top: 75px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    width: 1000px;
+    min-height: 80vh;
+    display: flex;
+    border: black 1px solid;
+}
+
+.status {
+    width: 25%;
+    background-color: rgb(241, 241, 151);
+    position: relative;
+    padding: 60px 1rem 0.5rem;
+}
+
+.status:nth-child(even) {
+background-color: beige;
+}
+
+.status h1 {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #343434;
+    color: #f3f3f3;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+#add_btn {
+    padding: 0.5rem 1rem;
+    background-color: #ccc;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add_btn:hover {
+    background-color: #aaa;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(15, 15, 15, 0.1),
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.todo .close {
+    position: absolute;
+    right: 5px;
+    top: 0rem;
+    font-size: 1.45rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.todo .close:hover {
+    color: #343444;
+}
+
+.modal-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    
+}
+
+.modal-btn:hover {
+    cursor: pointer;
+}
+
+.modal {
+    width: 450px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: top 0.5s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.modal.active {
+    top: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.23);
+    border-bottom: 1px solid #ccc;
+}
+
+.body {
+    padding: 1rem;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#overlay.active {
+    display: block;
+}
+
+#todo_input, #todo_submit {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.25rem;
+}
+
+#todo_submit {
+    font-weight: bold;
+
+}
+
+footer {
+    background-color: lightblue;
+    height: 75px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

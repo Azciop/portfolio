@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/logo-portefolio.png" />
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="todolist_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +20,41 @@
         </nav>
     </header>
     <main>
-
+        <div class="todo-container">
+            <div class="status">
+                <h1>No Status</h1>
+                <div class="container">
+                    <button id="add_btn" data-target="#modal">+ Add Todo</button>                   
+                  </div>  
+                  <!-- modal -->
+                  <div class="modal" id="modal">
+                    <div class="header">
+                      <div class="title">+ Add Todo</div>
+                      <button class="btn close-modal modal-btn">&times;</button>
+                    </div>
+                    <div class="body">
+                      <input type="text" id="todo_input">
+                      <input type="submit" value="Add Todo" id="todo_submit">
+                    </div>
+                  </div>
+                <div class="todo" draggable="true">
+                    Go to gym
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+            <div class="status">
+                <h1> Not Started Yet</h1>
+            </div>
+            <div class="status">
+                <h1>Work In Progress</h1>
+            </div>
+            <div class="status">
+                <h1>Done</h1>
+            </div>
+        </div>
+        <div id="overlay"></div>
     </main>
     <footer><p>Bernamont Steven 2022 © </p></footer>
-    <script type="text/javascript" src="../javascript/script.js"></script>
     <script type="text/javascript" src="../javascript/todolist.js"></script>
 </body>
 </html>
