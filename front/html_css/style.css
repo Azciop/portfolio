@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Aboreto', cursive;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
 
 main {
     background-color: beige;
+    padding-top: 75px;
 }
 
 
@@ -180,10 +182,6 @@ header {
 .logo_header {
     height: 50px;
     margin-left: 25px;
-}
-
-main {
-    padding-top: 75px;
 }
 
 #home {
