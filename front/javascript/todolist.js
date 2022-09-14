@@ -34,43 +34,49 @@ const all_status = document.querySelectorAll(".status");
 let draggableTodo = null;
 
 todos.forEach(todo => {
-    todo.addEventListener('dragstart', dragStart);
-    todo.addEventListener('dragend', dragEnd);
+  todo.addEventListener('dragstart', dragStart);
+  todo.addEventListener('dragend', dragEnd);
 })
 
 function dragStart() {
-    draggableTodo = this;
-    console.log("dragstart")
+  draggableTodo = this;
+  setTimeout(() => {
+    this.style.display = "none";
+  }, 0);
+  console.log("dragstart")
 }
 
 function dragEnd() {
-    draggableTodo = null;
-    console.log("dragend")
+  draggableTodo = null;
+  setTimeout(() => {
+    this.style.display = "block";
+  }, 0);
+  console.log("dragend")
 }
 
 all_status.forEach(status => {
-    status.addEventListener("dragover", dragOver);
-    status.addEventListener("dragenter", dragEnter);
-    status.addEventListener("dragleave", dragLeave);
-    status.addEventListener("drop", dragDrop);
+  status.addEventListener("dragover", dragOver);
+  status.addEventListener("dragenter", dragEnter);
+  status.addEventListener("dragleave", dragLeave);
+  status.addEventListener("drop", dragDrop);
 });
 
 function dragOver(e) {
-    e.preventDefault();
-    console.log("dragover");
+  e.preventDefault();
+  console.log("dragover");
 }
 
 function dragEnter() {
-    console.log("dragenter");
+  console.log("dragenter");
 }
 
 function dragLeave() {
-    console.log("dragleave");
+  console.log("dragleave");
 }
 
 function dragDrop() {
-    this.appendChild(draggableTodo);
-    console.log("drop");
+  this.appendChild(draggableTodo);
+  console.log("drop");
 }
 
 // create new todo function 
@@ -79,7 +85,44 @@ const todo_submit = document.getElementById('todo_submit');
 
 todo_submit.addEventListener('click', createTodo);
 
-function createTodo(){
+// creating the new todo
+function createTodo() {
+  // creating the div
+  const todo_div = document.createElement("div");
+  const input_value = document.getElementById("todo_input").value;
+  const txt = document.createTextNode(input_value);
 
+  todo_div.appendChild(txt);
+  todo_div.classList.add('todo');
+  todo_div.setAttribute("draggable", "true");
+
+  // creating the close span
+  const span = document.createElement("span");
+  const span_txt = document.createTextNode("\u00d7")
+  span.classList.add("close");
+  span.appendChild(span_txt);
+
+  todo_div.appendChild(span);
+
+  no_status.appendChild(todo_div);
+
+  span.addEventListener("click", () => {
+    span.parentElement.style.display = "none";
+  })
+
+  todo_div.addEventListener('dragstart', dragStart);
+  todo_div.addEventListener('dragend', dragEnd);
+
+  document.getElementById("todo_input").value = "";
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
 };
+
+const close_btns = document.querySelectorAll('.close');
+
+close_btns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.style.display = "none";
+  })
+})
 
