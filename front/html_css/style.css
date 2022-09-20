@@ -385,6 +385,8 @@ h2 {
 
 .projects_background {
     width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
     height: auto;
     max-height: 200px;
     border-radius: 20px 20px 5px 5px;
