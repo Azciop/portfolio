@@ -335,6 +335,10 @@ h2 {
     font-size: 1rem;
 }
 
+#pro_creation {
+    padding-bottom: 40px;
+}
+
 .projects_box {
     display: flex;
     margin-left: auto;

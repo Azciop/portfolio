@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,22 +13,27 @@
     <script src="https://kit.fontawesome.com/e5aa968fef.js" crossorigin="anonymous"></script>
     <title>ToolBox</title>
 </head>
+
 <body>
     <!-- loading animations  -->
-    <div> <!-- class="loader_animation"><img class="emoji5" src="../images/emoji5.gif" alt=""> --></div> 
-    <div> <!-- class="body_fade-in"> -->
+    <div>
+        <!-- class="loader_animation"><img class="emoji5" src="../images/emoji5.gif" alt=""> -->
+    </div>
+    <div>
+        <!-- class="body_fade-in"> -->
         <!-- Header with scrolldown for the nav -->
         <header class="flex_between align_center">
-            <a href="../html_css/toolbox.html"> <img src="../images/logo-portefolio-nocircle.png" class="logo_header"></a>
+            <a href="../html_css/toolbox.html"> <img src="../images/logo-portefolio-nocircle.png"
+                    class="logo_header"></a>
             <div class="emoji_header">
                 <img class="emoji1" src="../images/emoji1.png">
             </div>
-            <nav>          
+            <nav>
                 <!-- nav phone -->
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa-solid fa-square-caret-down icon"></i></button>
                     <div class="dropdown-content nav_phone">
-                        <a href="../html_css/index.html">Portfolio</a>
+                        <a href="/index.html">Portfolio</a>
                         <a href="../html_css/toolbox.html">Home</a>
                         <a href="../html_css/todolist.html">ToDoList</a>
                         <a href="../html_css/2048.html">2048</a>
@@ -37,7 +43,7 @@
 
                 <!-- nav desktop tablet -->
                 <ul class="flex_between nav_desktop">
-                    <li><a href="../html_css/index.html">Portfolio</a></li>
+                    <li><a href="/index.html">Portfolio</a></li>
                     <li><a href="../html_css/toolbox.html">Home</a></li>
                     <li><a href="../html_css/todolist.html">ToDoList</a></li>
                     <li><a href="../html_css/2048.html">2048</a></li>
@@ -47,7 +53,29 @@
                         style="color:  rgb(255, 255, 255);;"></i></button>
             </nav>
         </header>
-        
+        <main>
+            <section><article id="pro_creation">
+                <h2>Tools</h2>
+                <div class="projects_box  flex_row flex_wrap">
+                    <div class="projects_unity flex_column">
+                        <img class="projects_background" src="/front/images/todolist_background.png" />
+                        <h4>TODO LIST</h4>
+                        <h5>Création d'une todo list</h5>
+                        <h6>Technologies utilisées</h6>
+                        <div class="projects_skills">
+                            <i class="fa-brands fa-html5 icon" style="color: rgba(255, 100, 57, 1);"></i>
+                            <i class="fa-brands fa-css3-alt icon" style="color: rgba(45, 85, 255, 1);"></i>
+                            <i class="fa-brands fa-js icon" style="color: rgba(255, 240, 0); ;"></i>
+                        </div>
+                        <div class="projects_links">
+                            <a href="/front/html_css/todolist.html"><i
+                                    class="fa-solid fa-link icon" style="color: rgba(0, 0, 0);"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article></section>
+        </main>
+
         <!-- footer with copyright -->
         <footer>
             <img class="emoji3" src="../images/emoji3.gif" alt="">
@@ -57,4 +85,5 @@
         <script type="text/javascript" src="../javascript/script.js"></script>
     </div>
 </body>
+
 </html>
