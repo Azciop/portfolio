@@ -765,4 +765,14 @@ footer p {
     }
 }
 
-;
+/* toolbox css  */
+
+.projects_link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
