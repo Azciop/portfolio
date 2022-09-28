@@ -776,3 +776,17 @@ footer p {
     align-items: center;
 }
 
+.toolbox-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.toolbox-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
